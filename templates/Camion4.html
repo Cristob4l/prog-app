@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+	<div class="w-100 p-3" style="background-color: #98FB98;">Estado de las ruedas - 100%</div>
+	<div class="w-75 p-3" style="background-color: #6B8E23;">Estado del motor - 75%</div>
+	<div class="w-100 p-3" style="background-color: #98FB98;">Estado de la rampa - 100%</div>
+	<div class="w-100 p-3" style="background-color: #98FB98;">Estado del motor - 100%</div>
+	<div class="fixed-bottom">
+		<a class="btn btn-secondary" href="{{url_for('Camiones')}}" role="button">Regresar</a>
+	</div>
+
+{% endblock %}

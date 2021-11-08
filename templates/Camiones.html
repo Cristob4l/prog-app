@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+
+<main>	
+	<div class="container__todo">
+		<div class="box__trasera">
+			<div class="box__camion">
+				<h3>Komatsu-001</h3>
+				<p>Panel de informacion:</p>
+				<button id="btn__panel">Ver panel</button>
+				
+			</div>
+			<div class="box__camion2">
+				<h3>Komatsu-001</h3>
+				<p></p>
+				<button id="btn__registrar">Registrar Camion</button>
+			</div>
+		</div>
+		<div class="container__login-register">
+			<form action="" class="formulario__login">
+				<Button href="javascript:azxfds('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32708.604698327606!2d-70.30842795401067!3d-33.156548117355086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967d4f21d3f09441%3A0xd10fc4b4a4f41cf1!2sMina%20Los%20Bronces!5e0!3m2!1ses!2scl!4v1634045869170!5m2!1ses!2scl','Yaldex','width=400,height=300')">Ubicacion</Button>
+				<Button>Trabajos realizados</Button>
+				<Button>Movilizacion realizada</Button>
+				<Button>Costo de mantencion</Button>
+				<Button>Registrar componentes de camion</Button>
+				<Button>Planes de mantenimiento</Button>
+				<Button>Monitoreo/mantenimiento semaforos</Button>
+				<Button>Bitacora de problemas resueltos</Button>
+				<Button>Fechas de mantenimimentos correctivos y predictivos</Button>
+				<Button>Modelo analitico de prediccion de fallas</Button>
+				<img class="img" src="https://i0.wp.com/mineriaenlinea.com/wp-content/uploads/2016/07/komatsu_930e-e1469655644849.jpeg?fit=640%2C480&ssl=1"></img>
+			</form>
+			<form action="" class="formulario__registrer">
+				<h2>Registrarse</h2>
+				<input type="text" placeholder="Id camion">
+				<input type="text" placeholder="Nombre Encargado">
+				<input type="text" placeholder="Ingrese su correo">
+				<input type="text" placeholder="Ubicacion desiganada">
+				<button>Registrarse</button>
+			</form>
+			
+	</div>
+
+</main>
+<div class="contenedor__popup" id="contenedor_popup">
+		<div class="modal">
+			<h1>Ubicacion del camion</h1>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32708.604698327606!2d-70.30842795401067!3d-33.156548117355086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967d4f21d3f09441%3A0xd10fc4b4a4f41cf1!2sMina%20Los%20Bronces!5e0!3m2!1ses!2scl!4v1634045869170!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<button id="cerrar">Cerrar</button>
+		</div>	
+</div>
+<div class="id">
+	<p for="exampleFormControlInput1" class="form-label">Buscar por id</p>
+	<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="#12345" style="width: 30rem;">
+	<a class="btn btn-primary" href="{{url_for('Camiones')}}" role="buttom">Acceder</a>
+</div>
+<script src="{{ url_for('static', filename='scriptt.js') }}"></script>	
+<script type="text/javascript">
+	$(function(){
+	
+		$('[data-toggle="popover"]').popover();
+		
+	});	
+</script>	
+<script language="JavaScript" type="text/JavaScript">
+<!--
+//Made by 1st JavaScript Editor
+//http://www.yaldex.com
+//Come and get more (free) products
+
+var neww;
+  function azxfds(axzfds,axcfds,acxfds)
+    {neww=window.open(axzfds,axcfds,acxfds);
+neww.window.focus();
+}
+//-->
+</script>	
+	
+<!--	
+	
+	<div class="card" style="width: 60rem;">
+		<img src="https://i0.wp.com/mineriaenlinea.com/wp-content/uploads/2016/07/komatsu_930e-e1469655644849.jpeg?fit=640%2C480&ssl=1" class="card-img-top" alt="Camion Komatsu-1" style="width: 30rem;">
+		<div class="card-body">
+			<h5 class="card-title">Komatsu-001</h5>
+			<p class="card-text">Panel de informacion de camion Komatsu-001</p>
+			<a href="{{url_for('Ubicacion1')}}" class="btn btn-primary">Ubicacion</a>
+			<a href="{{url_for('CRUDeq')}}" class="btn btn-primary">Registrar camion</a>
+			<a href="{{url_for('CRUDeq')}}" class="btn btn-primary">Trabajos realizados</a>
+			<a href="{{url_for('CRUDeq')}}" class="btn btn-primary">Movilizacion realizada</a>
+			<a href="{{url_for('CRUDeq')}}" class="btn btn-primary">Costo de mantencion</a>
+			<a href="{{url_for('CRUDco')}}" class="btn btn-primary">Registrar componentes de camion</a>
+			<a href="{{url_for('Mantenimiento1')}}" class="btn btn-primary">Planes de mantenimiento</a>
+			<a href="{{url_for('Monitoreo')}}" class="btn btn-primary">Monitoreo/seguimiento semaforos</a>
+			<a href="{{url_for('Bitacora1')}}" class="btn btn-primary">Bitacora de problemas resueltos</a>
+			<a href="{{url_for('Fechas1')}}" class="btn btn-primary">Fechas de mantenimientos correctivos y predictivos</a>
+			<a href="{{url_for('ModeloAna1')}}" class="btn btn-primary">Modelo analitico de prediccion fallas</a>
+		</div>
+	</div>
+	<div class="card" style="width: 60rem; length: 30rem;">
+		<div class="card-body">
+			<h5 class="card-body">¿Desea registrar un camion?</h5>
+			<p class="card-text">Hagalo presionando ahora mismo</p>
+			<a href="{{url_for('Registrar1')}}" class="btn btn-primary">Registrar</a>
+			<p></p>
+			<p for="exampleFormControlInput1" class="form-label">Buscar por id</p>
+			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="#12345" style="width: 30rem;">
+			<a class="btn btn-primary" href="{{url_for('Camiones')}}" role="buttom">Acceder</a>
+		</div>
+	</div>
+	
+-->	
+{% endblock %}

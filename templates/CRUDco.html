@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+		<table class="table">
+			<tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+				<thead>
+					<tr>
+						<th scope="col">Registros Componenetes</th>
+						<th colspan="2">Informacion</th>
+					
+					</tr>
+				</thead>
+				<tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+					<tr>
+						<th scope="row">Motor</th>
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<th scope="row">Ruedas</th>
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<th scope="row">Radiador</th>
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<th scope="row">Cableado</th>
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<th scope="row">Frenos</th>
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<th scope="row"></th>
+						<td colspan="2"></td>
+					</tr>
+				</tbody>
+			</tbody>
+		</table>
+
+
+		<div class="fixed-bottom">
+			<a class="btn btn-secondary" href="{{url_for('Camiones')}}" role="button">Regresar</a>
+		</div>
+{% endblock %}

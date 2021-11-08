@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+	
+	<div class="card">
+		<div class="card-header">
+			Komatsu-930e 001
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">Ubicacion actual</h5>
+			<p class="card-text">Mostrar la ubicacion actual del camion</p>
+			<a href="{{url_for('Ubicacion1')}}" class="btn btn-primary">Ver ubicacion</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			Komatsu-930e 001
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">CRUD Equipos</h5>
+			<p class="card-text">Ver los registros del camion</p>
+			<a href="{{url_for('CRUDeq')}}" class="btn btn-primary">Ver CRUD</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			Komatsu-930e 001
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">CRUD Componentes</h5>
+			<p class="card-text">Mostrar los registros de los componentes del camion</p>
+			<a href="{{url_for('CRUDco')}}" class="btn btn-primary">Ver CRUD</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			Komatsu-930e 001
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">Registrar camion</h5>
+			<p class="card-text">Ver si el camion esta registrado</p>
+			<a href="{{url_for('Registrar1')}}" class="btn btn-primary">Mostrar registro</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			Komatsu-930e 001
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">Planes de mantenimiento</h5>
+			<p class="card-text">Ver los planes de mantenimiento del camnion</p>
+			<a href="{{url_for('Mantenimiento1')}}" class="btn btn-primary">Ver ubicacion</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			Komatsu-930e 001
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">Monitoreo/seguimiento semaforos</h5>
+			<p class="card-text">Ver estado actual de los equipos (muestra el mapa de estado)</p>
+			<a href="{{url_for('Monitoreo')}}" class="btn btn-primary">Ver Monitoreo</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			Komatsu-930e 001
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">Bitacora de problemas resueltos</h5>
+			<p class="card-text">Ver bitacora de mantenimiento</p>
+			<a href="{{url_for('Bitacora1')}}" class="btn btn-primary">Ver bitacora</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			Komatsu-930e 001
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">Fechas de mantenimientos correctivos y predictivos</h5>
+			<p class="card-text">Ver fechas de mantenimienos de correccion y de prediccion</p>
+			<a href="{{url_for('Fechas1')}}" class="btn btn-primary">Ver Fechas</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-header">
+			Komatsu-930e 001
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">Modelo analitico de prediccion de fallas</h5>
+			<p class="card-text">Ver el modelo analitico para predecir fallas en el camion</p>
+			<a href="{{url_for('ModeloAna1')}}" class="btn btn-primary">Ver modelo</a> 
+		</div>
+	</div>
+	
+{% endblock %}
