@@ -19,7 +19,7 @@ body {
 .container-all:target{
 	background: rgba(0,0,0,0.8);
 	visibility: visible;
-	opacity; 1;
+	opacity: 1;
 	transition: all 600ms;
 }
 
