@@ -10,7 +10,6 @@ then
 
     echo "PostgreSQL started"
 fi
-
-python manage.py create_db
+  echo "$DATABASE"
 
 exec "$@"
