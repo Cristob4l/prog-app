@@ -21,3 +21,5 @@ COPY . /usr/src/app/
 
 # run entrypoint.sh
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+EXPOSE 5432
+CMD ["postgres"]

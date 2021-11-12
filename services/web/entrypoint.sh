@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "$DATABASE" = "postgres" ]
+if [ "$DATABASE" = "prog_app" ]
 then
     echo "Waiting for postgres..."
 
@@ -10,6 +10,6 @@ then
 
     echo "PostgreSQL started"
 fi
-  echo "$DATABASE"
+  echo "$DATABASE $SQL_HOST $SQL_PORT"
 
 exec "$@"
