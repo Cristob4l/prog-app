@@ -1,0 +1,25 @@
+
+retorna todas las reparaciones con los componentes involucrados;
+SELECT * FROM reparacion as rep JOIN maquina as maq ON rep.id_maquina = maq.id_maquina JOIN usuario as us ON rep.id_maquina = us.id_usuario JOIN reparacion_componente as repcom ON rep.id_reparacion = repcom.id_reparacion;
+
+retorna todas las reparaciones con los componentes de la maquina 1;
+SELECT * FROM reparacion as rep JOIN maquina as maq ON rep.id_maquina = maq.id_maquina JOIN usuario as us ON rep.id_maquina = us.id_usuario JOIN reparacion_componente as repcom ON rep.id_reparacion = repcom.id_reparacion WHERE rep.id_maquina = 1;
+
+retorna todos los incidentes 
+SELECT * FROM incidentes as inc JOIN maquina as maq ON inc.id_maquina = maq.id_maquina JOIN usuario as us ON inc.id_usuario = us.id_usuario;
+
+retorna los incidentes de la maquina 1 
+SELECT * FROM incidentes as inc JOIN maquina as maq ON inc.id_maquina = maq.id_maquina JOIN usuario as us ON inc.id_usuario = us.id_usuario WHERE inc.id_maquina = 1;
+
+retorna las mantenciones preventivas
+SELECT * FROM mantencion_preventiva as manpre JOIN componente as comp ON manpre.id_componente = comp.id_componente JOIN estado_componente as escomp ON manpre.id_estado_componente = escomp.id_estado;
+
+retorna las mantenciones con los componentes involucrados
+SELECT * FROM mantencion as man JOIN maquina as maq ON man.id_maquina = maq.id_maquina JOIN mantencion_componente as mancomp ON man.id_mantencion = mancomp.id_mantencion JOIN componente as comp ON mancomp.id_componente = comp.id_componente;
+
+
+retorna la mantencion 1 y todos sus valores (componente, maquina etc)
+SELECT * FROM mantencion as man JOIN maquina as maq ON man.id_maquina = maq.id_maquina JOIN mantencion_componente as mancomp ON man.id_mantencion = mancomp.id_mantencion JOIN componente as comp ON mancomp.id_componente = comp.id_componente WHERE man.id_mantencion = 1;
+
+retorn las mantenciones de la maquina 1 y los componentes involucrados
+SELECT * FROM mantencion as man JOIN maquina as maq ON man.id_maquina = maq.id_maquina JOIN mantencion_componente as mancomp ON man.id_mantencion = mancomp.id_mantencion JOIN componente as comp ON mancomp.id_componente = comp.id_componente WHERE maq.id_maquina = 1;
