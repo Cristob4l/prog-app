@@ -44,6 +44,7 @@ ENV PGDATABASE=prog_app
 ENV PGPASSWORD=admin
 ENV PGPORT=5432
 
+
 EXPOSE 8080
 
 RUN npm install 

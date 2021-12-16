@@ -21,5 +21,15 @@ export const rowsTable = {
 		desc: "descripcion",
 		date: "fecha",
 		idUser: "id_usuario"
+	},
+	users: {
+		nameTable: "usuario",
+		id: "id_usuario",
+		cargo: "cargo"
+	},
+	cargo: {
+		nameTable: "cargo",
+		id: "id_cargo",
+		nombre: "nombre"
 	}
 };

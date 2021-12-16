@@ -3,7 +3,8 @@ import {
 	createTrucks,
 	getAllTruks,
 	getIncidentForTruck,
-	getStateTruck
+	getStateTruck,
+	setIncidenTruck
 } from "../controller/trucks";
 
 const router = Router();
@@ -14,5 +15,7 @@ router.post("/add", createTrucks);
 router.get("/:id/incident", getIncidentForTruck);
 
 router.get("/states", getStateTruck);
+
+router.post("/:id/incident", setIncidenTruck);
 
 export default router;

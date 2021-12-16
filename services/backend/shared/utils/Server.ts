@@ -1,5 +1,7 @@
 import express, { Application } from "express";
 import trucksRouter from "../../trucks/router/trucks";
+import userRouter from "../../users/router/users";
+
 import db from "../db/DataBase";
 import cors from "cors";
 
@@ -7,7 +9,8 @@ export class Server {
 	private app: Application;
 	private port: string;
 	private apiPath = {
-		truks: "/api/truks"
+		truks: "/api/truks",
+		users: "/api/users"
 	};
 	constructor() {
 		this.app = express();
@@ -22,6 +25,7 @@ export class Server {
 		db.connect((e, client, done) => {
 			if (e) {
 				console.log("Ocurrio un error al intentar conectarse a la BD");
+				console.log(e);
 			} else {
 				console.log("Se conecto a la base de dato con exito");
 			}
@@ -36,6 +40,7 @@ export class Server {
 
 	routes() {
 		this.app.use(this.apiPath.truks, trucksRouter);
+		this.app.use(this.apiPath.users, userRouter);
 	}
 
 	listen() {

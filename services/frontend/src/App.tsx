@@ -1,6 +1,8 @@
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import { AddIncidentView } from "./views/addIncident/add_incident_view";
 import { HomeView } from "./views/home/home_view";
+import IncidentView from "./views/incident/incident_view";
 import { TruckView } from "./views/truck/truck_view";
 
 function App() {
@@ -25,6 +27,11 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeView />} />
         <Route path="/maquinaria" element={<TruckView />} />
+        <Route path="/maquinaria/incidentes/:id" element={<IncidentView />} />
+        <Route
+          path="/maquinaria/add/incident/:id"
+          element={<AddIncidentView />}
+        />
       </Routes>
     </>
   );
